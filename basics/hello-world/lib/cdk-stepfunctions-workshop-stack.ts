@@ -16,6 +16,8 @@ export class CdkStepfunctionsWorkshopStack extends cdk.Stack {
 
     new sfn.StateMachine(this, 'StateMachine', {
       definitionBody: sfn.DefinitionBody.fromChainable(definition),
+      comment:
+        'An example of the Amazon States Language for scheduling a task.',
     });
   }
 }
